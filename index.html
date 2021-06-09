@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple WebOS</title>
+    <link rel="stylesheet" href="./mobile.css" MEDIA="(max-width: 800px)">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/apple.svg">
+</head>
+
+<body>
+    <!--Loading Screen-->
+    <div class="loader">
+        <div class="loader-holder">
+            <img class="fade" width="52" src="./img/loading-icon.png" alt="Loading Apple Screen Logo">
+        </div>
+    </div>
+    <!--Loading Screen-->
+    <div id="popup-confirm-add" class="notifications">
+        <div>
+            <p class="not-p">
+                Emërto Shënimin tëndë të ri
+            </p>
+            <input id="title_input" type="text" autocomplete="off">
+            <div class="popup-container">
+                <button class="btn mr-5" id="ok-confirm">Add to Notes</button>
+                <button class="btn" id="no-confirm">No take me Back</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="pre-header">
+        <header>
+            <div class="h-left">
+                <div class="logo-holder"><a href="#">
+                        <img class="logo" src="./img/logo.svg" alt="">
+                    </a></div>
+                <div class="menu-links">
+                    <a class="menu white" href="#">Kërkuesi</a>
+                    <a class="menu white" href="#">Skedari</a>
+                    <a class="menu white" href="#">Redakto</a>
+                    <a class="menu white" href="#">Shiko</a>
+                    <a class="menu white" href="#">Shko</a>
+                    <a class="menu white" href="#">Dritarja</a>
+                    <a class="menu white" href="#">Ndihmë</a>
+                </div>
+            </div>
+
+            <div class="h-right">
+                <div class="right-holder">
+                    <img class="spacer-sm" src="./img/icons (7).svg" width="24px" alt="">
+                    <img class="spacer-sm" id="menu-btn" src="./img/icons (8).svg" width="20" alt="">
+                    <img class="spacer-sm" src="./img/icons (1).svg" width="24px" alt="">
+                    <img class="spacer-sm" src="./img/icons (2).svg" width="24px" alt="">
+
+
+                    <p class="space white" id="date">June 32</p>
+
+                    <p class="space white" id="time">00:00</p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="drag1" class="calculator">
+        <div class="area">
+            <div class="ico-up">
+                <div id="closeCal" class="close-icon"></div>
+                <div class=" a-icon"></div>
+                <div class="b-icon"></div>
+            </div>
+            <div id="input" class="ico-input">0</div>
+        </div>
+        <div class="pad">
+            <div class="pad-line">
+                <div id="clear" class="pad-key purple">AC</div>
+                <div id="backspace" class="pad-key purple">CE</div>
+                <div id="modulus" class="pad-key purple">%</div>
+                <div id="divide" class="pad-key orange">÷</div>
+            </div>
+            <div class="pad-line">
+                <div id="n7" class="pad-key grey">7</div>
+                <div id="n8" class="pad-key grey">8</div>
+                <div id="n9" class="pad-key grey">9</div>
+                <div id="multiply" class="pad-key orange">×</div>
+            </div>
+            <div class="pad-line">
+                <div id="n4" class="pad-key grey">4</div>
+                <div id="n5" class="pad-key grey">5</div>
+                <div id="n6" class="pad-key grey">6</div>
+                <div id="minus" class="pad-key orange">-</div>
+            </div>
+            <div class="pad-line">
+                <div id="n1" class="pad-key grey">1</div>
+                <div id="n2" class="pad-key grey">2</div>
+                <div id="n3" class="pad-key grey">3</div>
+                <div id="plus" class="pad-key orange">+</div>
+            </div>
+            <div class="pad-line">
+                <div id="n0" class="pad-key p-k-extends grey rounded-left">0</div>
+                <div id="dot" class="pad-key grey">.</div>
+                <div id="sum" class="pad-key orange rounded-right">=</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="notes" id="notes">
+        <div class="notes-containers">
+            <div class="notesleft">
+                <div class="note-title">
+                    <div class="notes-bar">
+                        <div id="closeCal" class="close-icon"></div>
+                        <div class=" a-icon"></div>
+                        <div class="b-icon"></div>
+                    </div>
+                </div>
+                <div class="notes-sidebar">
+                    <div class="note-title">
+                        <h4 class="note-l-h">Shënimet</h4>
+                    </div>
+                    <div class="note-item">
+                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                            class="folder-name">Studim</span><span class="folder-count">4</span>
+                    </div>
+                    <div class="note-item active">
+                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                            class="folder-name">Bootcampi</span><span class="folder-count">3</span>
+                    </div>
+                    <div class="note-item">
+                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                            class="folder-name">Universiteti</span><span class="folder-count">2</span>
+                    </div>
+                    <div class="note-item">
+                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                            class="folder-name">Biznesi</span><span class="folder-count">53</span>
+                    </div>
+                    <div class="note-item">
+                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                            class="folder-name">Shopping</span><span class="folder-count">2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="notesmiddle">
+                <div class="notes-list">
+                    <div class="note-options">
+                        <div class="add-note-a">
+                            <img src="./img/add.svg" alt="Add Note">
+                        </div>
+                        <div id="cna" class="clear-notes-a">
+                            <img src="./img/clear.svg" alt="Add Note">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notesright">
+                <textarea class="note-area"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="apps">
+        <a href="#">
+            <a href="https://benkco.io">
+                <img class="app-icon" width="52" src="./img/benkco.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/App Store.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img id="calculator-icon" class="app-icon" width="52" src="./img/Calculator.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/Calendar.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/Safari.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/Messages.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/Group 39.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img id="calculator-icon" class="app-icon" width="52" src="./img/Group 40.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/Photos.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/arabic.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/Notes.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/Figma.png" alt="Apple App Icon">
+            </a>
+        </a>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/System Preferences.png" alt="Apple App Icon">
+            </a>
+        </a>
+    </div>
+</body>
+<script src="./js/calculator.js"></script>
+<script src="./js/notes.js"></script>
+
+</html>

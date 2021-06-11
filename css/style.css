@@ -4,7 +4,7 @@
 }
 
 :root {
-    --wallpaper: url(../img/bigus.jpg);
+    --wallpaper: url(../img/mac-light.jpg);
 }
 
 .darkmode {
@@ -17,6 +17,7 @@
     font-family: 'Apple';
     cursor: -webkit-image-set(url(../img/cursor.svg) 4.5x), default !important;
     user-select: none;
+    outline: none !important;
 }
 
 body {
@@ -48,6 +49,10 @@ a {
     align-items: center;
     padding-top: .2855rem;
     margin-right: .5em;
+}
+
+nav a p {
+    text-shadow: 1.5px 1.5px 2px #33333375;
 }
 
 .menu {
@@ -175,6 +180,7 @@ header {
     height: 3.7vh;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(100px);
+    box-shadow: 0px 2px 3px #18181845;
 }
 
 .left {
@@ -205,10 +211,21 @@ header {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(100px);
     border-radius: 1.75rem;
+    box-shadow: 0 0 5px #18181865;
+    -moz-box-shadow: 0 0 5px #18181865;
+    -webkit-box-shadow: 0 0 5px #18181865;
+    -o-box-shadow: 0 0 5px #18181865;
 }
 
 .space {
-    margin: 0 .125rem;
+    margin: 0 .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mb {
+    margin-bottom: .1em;
 }
 
 .spacer-sm {
@@ -217,6 +234,12 @@ header {
 
 .ico-up {
     padding-left: .5rem;
+}
+
+.ico-ups {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
 }
 
 .app-icon {
@@ -341,7 +364,7 @@ header {
     width: 97.5%;
     height: 97.5%;
     outline: none;
-    border: 0;
+    border: 0px solid red;
     font-size: 1.25em;
 }
 
@@ -352,6 +375,60 @@ header {
 
 .note-item img {
     margin-right: .30em;
+}
+
+.note-input {
+    padding: .35em .85em;
+    font-size: 1.1em;
+    margin: .35em 0em;
+    border-radius: 6px;
+    outline: 0;
+    border: 1px solid #33333355;
+}
+
+.fly {
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 50%;
+    margin-left: 2.5%;
+}
+
+.note-btn {
+    border: 0;
+    padding: .35em .85em;
+    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25);
+    border-radius: 6px;
+    font-size: 1.1em;
+    color: white;
+}
+
+.note {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+}
+
+.note-btn-sm {
+    border: 0;
+    padding: 0.1em;
+    background: linear-gradient(180deg, #4B91F750 0%, #367AF640 100%);
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25);
+    border-radius: 612px;
+    margin-left: .25em;
+    color: white;
+    font-size: 14px !important;
+}
+
+.input-hodler {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .25em;
 }
 
 .note-item {
@@ -440,8 +517,12 @@ header {
 }
 
 .note-options {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    border-top: 1px solid #33333350;
+    padding-top: .5em;
 }
 
 .add-note, .delete-all {
@@ -451,6 +532,26 @@ header {
     background: #A59B930B;
     border-radius: .25em;
     padding: .25em;
+}
+
+.add-note-a, .clear-notes-a {
+    position: absolute;
+    border: 0;
+    padding: .15em .45em;
+    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25);
+    border-radius: 6px;
+    font-size: 1em;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    bottom: 1em;
+}
+
+.add-ic {
+    margin-right: .1em;
+    filter: invert(1);
 }
 
 .note-which-title {
@@ -624,7 +725,7 @@ html {
     top: 20%;
     left: 20%;
     width: 30%;
-    height: 40%;
+    height: 30%;
     border-radius: .35em;
     padding: 2em;
     background: rgba(255, 255, 255, 0.2);
@@ -648,13 +749,36 @@ html {
     align-items: center;
 }
 
+.weather-bottom input::placeholder {
+    color: white;
+}
+
 .weather-bottom input {
-    padding: .5em 2em .5em .25em;
+    padding: .5em 2em .5em .4em;
     font-size: 1.1em;
     border: 1px solid #ffffff;
     background: transparent;
     color: white;
     border-radius: .25em;
+}
+
+.weather-bottom textarea:focus, input:focus {
+    color: black;
+    border: black solid 1px;
+}
+
+.weather-bottom input, select, textarea {
+    color: black;
+    border: black solid 1px;
+}
+
+textarea:focus {
+    border: 0 !important;
+}
+
+textarea {
+    border: 0 !important;
+    outline: none !important;
 }
 
 .app-spacer {
@@ -680,7 +804,19 @@ html {
     overflow: hidden;
     max-height: 80;
     cursor: pointer;
+}
+
+#head {
     display: none;
+}
+
+.weather_search {
+    border: #ffffff80 solid 1px !important;
+}
+
+.weather_search:focus {
+    color: white !important;
+    border: #ffffff80 solid 1px !important;
 }
 
 .left {
@@ -703,10 +839,18 @@ html {
 #note-text {
     width: 100%;
     height: 100%;
-    outline: none;
-    font-size: 1.2em
+    font-size: 1.2em;
+    padding: 1em;
+    outline: none !important;
 }
 
 #note-text:focus {
+    outline: none;
+    color: #181818;
+    border: 0px solid red;
+}
+
+#note-text::placeholder {
+    color: #181818;
     outline: none;
 }

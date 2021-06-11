@@ -1,52 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en_us">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple WebOS</title>
-    <link rel="stylesheet" href="./mobile.css" MEDIA="(max-width: 800px)">
+    <title>Apple Web OS</title>
+    <link rel="stylesheet" href="./css/mobile.css" MEDIA="(max-width: 920px)">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/apple.svg">
 </head>
 
 <body>
-    <!--Loading Screen-->
-    <div class="loader">
-        <div class="loader-holder">
-            <img class="fade" width="52" src="./img/loading-icon.png" alt="Loading Apple Screen Logo">
-        </div>
+    <div id="mobile">
+        <img src="./img/apple.svg" alt="Apple Logo">
+        <h2 class="mobile-heading">
+            But Man, Apple Web OS can't run on mobile devices and smaller screens.
+        </h2>
     </div>
-    <!--Loading Screen-->
-    <div id="popup-confirm-add" class="notifications">
-        <div>
-            <p class="not-p">
-                Emërto Shënimin tëndë të ri
-            </p>
-            <input id="title_input" type="text" autocomplete="off">
-            <div class="popup-container">
-                <button class="btn mr-5" id="ok-confirm">Add to Notes</button>
-                <button class="btn" id="no-confirm">No take me Back</button>
 
-            </div>
+    <!-- <div id="popup-confirm-add" class="notifications">
+        <form action="">
+            <input type="text" class="btn" id="note-title" placeholder="Note title">
+            <textarea id="note-text" class="btn" placeholder="Note Details"></textarea>
+        </form>
+        <p class="not-p">
+            Emërto Shënimin tëndë të ri
+        </p>
+        <input id="textarea" type="text" autocomplete="off">
+        <div class="popup-container">
+            <button class="btn mr-5" id="add-btn">Add Note</button>
+            <button class="btn" id="no-confirm">No take me Back</button>
         </div>
-    </div>
+    </div> -->
     <div class="pre-header">
         <header>
             <div class="h-left">
-                <div class="logo-holder"><a href="#">
+                <div class="logo-holder">
+                    <a href="#">
                         <img class="logo" src="./img/logo.svg" alt="">
-                    </a></div>
-                <div class="menu-links">
-                    <a class="menu white" href="#">Kërkuesi</a>
-                    <a class="menu white" href="#">Skedari</a>
-                    <a class="menu white" href="#">Redakto</a>
-                    <a class="menu white" href="#">Shiko</a>
-                    <a class="menu white" href="#">Shko</a>
-                    <a class="menu white" href="#">Dritarja</a>
-                    <a class="menu white" href="#">Ndihmë</a>
+                    </a>
                 </div>
+                <nav class="nav-holder">
+                    <a class="menu white" href="#">
+                        <b>Kërkuesi</b>
+                    </a>
+                    <a class="menu white" href="#">
+                        <p>Skedari</p>
+                    </a>
+                    <a class="menu white" href="#">
+                        <p>Redakto</p>
+                    </a>
+                    <a class="menu white" href="#">
+                        <p>Shiko</p>
+                    </a>
+                    <a class="menu white" href="#">
+                        <p>Shko</p>
+                    </a>
+                    <a class="menu white" href="#">
+                        <p>Dritarja</p>
+                    </a>
+                    <a class="menu white" href="#">
+                        <p>Ndihmë</p>
+                    </a>
+                </nav>
             </div>
 
             <div class="h-right">
@@ -55,17 +72,24 @@
                     <img class="spacer-sm" id="menu-btn" src="./img/icons (8).svg" width="20" alt="">
                     <img class="spacer-sm" src="./img/icons (1).svg" width="24px" alt="">
                     <img class="spacer-sm" src="./img/icons (2).svg" width="24px" alt="">
-
-
-                    <p class="space white" id="date">June 32</p>
-
-                    <p class="space white" id="time">00:00</p>
+                    <p class="space white" id="date">Sat 9 June</p>
+                    <p class="space white" id="time">20:00</p>
                 </div>
             </div>
         </header>
     </div>
-
-    <div id="drag1" class="calculator">
+    <div class="weather" id="weather">
+        <div class="weather-top">
+            <div class="city">Northampton, GB</div>
+            <div class="temp">15<span>°</span></div>
+            <div class="date">Thursday 10 January 2020</div>
+        </div>
+        <div class="weather-bottom">
+            <input type="text" class="weather_search" placeholder="Search a city...">
+        </div>
+    </div>
+    <!-- Caclulator -->
+    <div id="calculator" class="calculator">
         <div class="area">
             <div class="ico-up">
                 <div id="closeCal" class="close-icon"></div>
@@ -107,7 +131,8 @@
 
         </div>
     </div>
-    <div class="notes" id="notes">
+
+    <!-- <div class="notes" id="notes">
         <div class="notes-containers">
             <div class="notesleft">
                 <div class="note-title">
@@ -122,44 +147,113 @@
                         <h4 class="note-l-h">Shënimet</h4>
                     </div>
                     <div class="note-item">
-                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                        <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
                             class="folder-name">Studim</span><span class="folder-count">4</span>
                     </div>
                     <div class="note-item active">
-                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                        <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
                             class="folder-name">Bootcampi</span><span class="folder-count">3</span>
                     </div>
                     <div class="note-item">
-                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                        <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
                             class="folder-name">Universiteti</span><span class="folder-count">2</span>
                     </div>
                     <div class="note-item">
-                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                        <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
                             class="folder-name">Biznesi</span><span class="folder-count">53</span>
                     </div>
                     <div class="note-item">
-                        <img src="./img/note.svg" width="22px" alt="Folder"> <span
+                        <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
                             class="folder-name">Shopping</span><span class="folder-count">2</span>
                     </div>
                 </div>
             </div>
             <div class="notesmiddle">
-                <div class="notes-list">
-                    <div class="note-options">
-                        <div class="add-note-a">
-                            <img src="./img/add.svg" alt="Add Note">
-                        </div>
-                        <div id="cna" class="clear-notes-a">
-                            <img src="./img/clear.svg" alt="Add Note">
-                        </div>
+                <div class="note-options">
+                    <div id="add_note" class="add-note-a">
+                        <img src="./img/add.svg" alt="Add Note"> <span>Shto Shënim</span>
                     </div>
+                    <div id="clear_storage" class="clear-notes-a">
+                        <img src="./img/clear.svg" alt="Add Note"> <span>Fshij Shënimet</span>
+                    </div>
+                </div>
+                <div class="notes-list">
+                    <div class="note-which">
+                        <h5 id="title" class="note-which-title check">Astitle+</h5>
+                    </div>
+                    <div class="divider"></div>
                 </div>
             </div>
             <div class="notesright">
-                <textarea class="note-area"></textarea>
+                <textarea id="textform" class="note-area">
+
+                    </textarea>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <section class="container">
+        <div class="notesleft">
+            <div class="note-title">
+                <div class="notes-bar">
+                    <div id="closeCal" class="close-icon"></div>
+                    <div class=" a-icon"></div>
+                    <div class="b-icon"></div>
+                </div>
+            </div>
+            <div class="notes-sidebar">
+                <div class="note-title">
+                    <h4 class="note-l-h">Shënimet</h4>
+                </div>
+                <div class="note-item">
+                    <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
+                        class="folder-name">Studim</span><span class="folder-count">4</span>
+                </div>
+                <div class="note-item active">
+                    <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
+                        class="folder-name">Bootcampi</span><span class="folder-count">3</span>
+                </div>
+                <div class="note-item">
+                    <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
+                        class="folder-name">Universiteti</span><span class="folder-count">2</span>
+                </div>
+                <div class="note-item">
+                    <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
+                        class="folder-name">Biznesi</span><span class="folder-count">53</span>
+                </div>
+                <div class="note-item">
+                    <img src="./img/native/folder.png" width="22px" alt="Folder"> <span
+                        class="folder-name">Shopping</span><span class="folder-count">2</span>
+                </div>
+            </div>
+        </div>
+        <div class="notesmiddle">
+            <input type="text" id="note-title" placeholder="Note title">
+            <button id="add-btn">Save</button>
+            <div class="note-options">
+                <div id="add_note" class="add-note-a">
+                    <img src="./img/add.svg" alt="Add Note"> <span>Shto Shënim</span>
+                </div>
+                <div id="clear_storage" class="clear-notes-a">
+                    <img src="./img/clear.svg" alt="Add Note"> <span>Fshij Shënimet</span>
+                </div>
+            </div>
+            <div id="notes">
+                <div class="note right">
+                    <h3 class="note-title"></h3>
+                    <button class="note-btn">Delete Note</button>
+                    <button class="notr-btn edit-btn">Delete Note</button>
+                </div>
+            </div>
+        </div>
+        <div class="notesright">
+            <form class="left" action="">
+                <textarea id="note-text" placeholder="Note Details"></textarea>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootom HEADER-->
     <div class="apps">
         <a href="#">
             <a href="https://benkco.io">
@@ -193,12 +287,7 @@
         </a>
         <a href="#">
             <a href="#">
-                <img class="app-icon" width="52" src="./img/Group 39.png" alt="Apple App Icon">
-            </a>
-        </a>
-        <a href="#">
-            <a href="#">
-                <img id="calculator-icon" class="app-icon" width="52" src="./img/Group 40.png" alt="Apple App Icon">
+                <img id="weather-btn" class="app-icon" width="52" src="./img/icons/weather.png" alt="Apple App Icon">
             </a>
         </a>
         <a href="#">
@@ -213,7 +302,7 @@
         </a>
         <a href="#">
             <a href="#">
-                <img class="app-icon" width="52" src="./img/Notes.png" alt="Apple App Icon">
+                <img id="notes-btn" class="app-icon" width="52" src="./img/Notes.png" alt="Apple App Icon">
             </a>
         </a>
         <a href="#">
@@ -226,9 +315,20 @@
                 <img class="app-icon" width="52" src="./img/System Preferences.png" alt="Apple App Icon">
             </a>
         </a>
+        <div class="app-spacer">
+        </div>
+        <a href="#">
+            <a href="#">
+                <img class="app-icon" width="52" src="./img/icons/trash.png" alt="Apple App Icon">
+            </a>
+        </a>
     </div>
+    <!-- Bootom HEADER-->
 </body>
 <script src="./js/calculator.js"></script>
-<script src="./js/notes.js"></script>
+<script src="./js//global.js"></script>
+<script src="./js/weather.js"></script>
+<!-- <script src="./js/notes.js"></script> -->
+<script src='./js/todo.js'></script>
 
 </html>

@@ -1,0 +1,22 @@
+#mobile {
+    display: flex !important;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999 !important;
+}
+
+.mobile-heading {
+    width: 75%;
+    color: white;
+}
+#mobile img{
+    width: 15vw;
+    margin-bottom: 1.5vh;
+    filter: invert(1);
+}

@@ -23,18 +23,13 @@ const n0 = document.querySelector('#n0');
 const calculator_view = document.querySelector('.calculator');
 const calculator = document.querySelector('.calculator');
 const show_calculator = document.querySelector('#calculator-icon');
+const weather = document.querySelector('.weather');
+const weather_btn = document.querySelector('#weather-btn');
+
 const time = document.querySelector('#time');
 const date = document.querySelector('#date');
 const pad_key = document.querySelector('.pad-key');
-const mode = document.getElementById("menu-btn");
-const close_calculator = document.querySelector('#closeCal');
 // Variablat
-
-// Clpose
-close_calculator.addEventListener('click', () => {
-    calculator.classList.add('hideCal');
-    console.log("calculator is closed")
-})
 
 // Calculator Keyboard Input
 n1.addEventListener('click', () => {
@@ -119,11 +114,9 @@ backspace.addEventListener('click', () => {
 })
 // Calculator Keyboard Input
 
-
-
 // Keybinds Listener Input
-window.addEventListener('keydown', function (event) {
-    switch (event.key) {
+window.addEventListener('keydown', (keypressed) => {
+    switch (keypressed.key) {
         case '1':
             if (input.innerHTML == '0') input.innerHTML = '';
             input.innerHTML += '1';
@@ -204,10 +197,6 @@ window.addEventListener('keydown', function (event) {
             input.innerHTML = '0';
             break;
         case 'Backspace':
-            pad_key.classList.toggle('hover')
-            setTimeout(function () {
-                pad_key.classList.remove('hover')
-            }, 200)
             if (input.innerHTML != '0') {
                 var x = document.getElementById("input").innerText;
                 input.innerHTML = x.slice(0, -1);
@@ -226,54 +215,24 @@ show_calculator.addEventListener('click', () => {
     if (!calculator_view.classList.contains('show')) {
         calculator_view.classList.add('show')
     } else calculator_view.classList.remove('show');
+    calculator_view.classList.add('cal-sizes')
 })
 // Show / Hide Caclulator
 
-
-// Time and Date
-time.innerHTML = new Date().toLocaleTimeString([], {hour: '2-digit', minute: "2-digit", hour12: false});
-date.innerHTML = (new Date()).toString().split(' ').splice(1, 3).join(' ');
-// Time and Date
-
-// Calculator Movement
-(function (elementSelector) {
-    var direkcioniX, direkcioniY, objInitLeft, objInitTop;
-    var inDrag = false;
-    var dragTarget = document.querySelector(elementSelector);
-    dragTarget.addEventListener("mousedown", function (e) {
-        inDrag = true;
-        objInitLeft = dragTarget.offsetLeft;
-        objInitTop = dragTarget.offsetTop;
-        direkcioniX = e.pageX; direkcioniY = e.pageY;
-    });
-    document.addEventListener("mousemove", function (e) {
-        if (!inDrag) {return;}
-        dragTarget.style.left = (objInitLeft + e.pageX - direkcioniX) + "px";
-        dragTarget.style.top = (objInitTop + e.pageY - direkcioniY) + "px";
-    });
-    document.addEventListener("mouseup", function (e) {inDrag = false;});
-}("#drag1"));
-// Calculator Movement
-
-// Loader Screen
-// window.onload = () => {
-//     const loader = document.querySelector('.loader');
-//     loader.classList.add('loader-hide');
-//     setTimeout(function () {
-//         loader.classList.remove("loader-hide");
-//     }, 5001);
-// }
-// Loader Screen
-
-
-mode.addEventListener('click', () => {
-    const pickBody = document.body;
-    pickBody.classList.toggle("darkmode");
-    const newmode = pickBody.classList.contains('darkmode') ? 'darkmode' : 'lightmode';
-    localStorage.setItem('mode', newmode)
-})
-window.onload = () => {
-    const newmode = localStorage.getItem('mode')
-    document.body.classList.add(newmode);
-}
-
+    (function (elementSelector) {
+        var direkcioniX, direkcioniY, objInitLeft, objInitTop;
+        var inDrag = false;
+        var dragTarget = document.querySelector(elementSelector);
+        dragTarget.addEventListener("mousedown", function (e) {
+            inDrag = true;
+            objInitLeft = dragTarget.offsetLeft;
+            objInitTop = dragTarget.offsetTop;
+            direkcioniX = e.pageX; direkcioniY = e.pageY;
+        });
+        document.addEventListener("mousemove", function (e) {
+            if (!inDrag) {return;}
+            dragTarget.style.left = (objInitLeft + e.pageX - direkcioniX) + "px";
+            dragTarget.style.top = (objInitTop + e.pageY - direkcioniY) + "px";
+        });
+        document.addEventListener("mouseup", function (e) {inDrag = false;});
+    }("#calculator"));

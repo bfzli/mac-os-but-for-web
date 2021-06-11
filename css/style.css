@@ -680,6 +680,7 @@ html {
     overflow: hidden;
     max-height: 80;
     cursor: pointer;
+    display: none;
 }
 
 .left {

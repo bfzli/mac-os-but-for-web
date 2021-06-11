@@ -22,3 +22,7 @@
 // const mode = document.getElementById("menu-btn");
 // const pickBody = document.body;
 // const newmode = pickBody.classList.contains('darkmode') ? 'darkmode' : 'lightmode';
+
+
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes();

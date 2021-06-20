@@ -1,4 +1,5 @@
-# MacOS but for Web
+# MacOS but for Web 
+This is Big Sur version of Apple cloned for web so you can open with a Browser, in future with be enriched with updates.
 
-
-All the resources used in this project are owned by Apple and taken from Internet. This website was built for educational purposes licensed as MIT.
+## License 
+This project and all it's sources are licensed as Open Source (MIT), and it can be used for almost all purposes, except evil.
